@@ -1,0 +1,25 @@
+name: Terraform
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        tf-version: ["1.9.x", "1.10.x"]
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: ${{ matrix.tf-version }}
+
+    - name: fmt
+      run: terraform fmt -check
+
+    - name: init
+      run: terraform init
+
+    - name: validate
+      run: terraform validate
