@@ -33,5 +33,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_record_ids"></a> [record\_ids](#output\_record\_ids) | The identifiers of DNS record sets created by this module. |
 <!-- END_TF_DOCS -->
