@@ -16,7 +16,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_example_zone"></a> [example\_zone](#module\_example\_zone) | terraform-google-modules/cloud-dns/google | n/a |
-| <a name="module_gmail_records"></a> [gmail\_records](#module\_gmail\_records) | git@github.com:kirkkosinski/terraform-google-cloud-dns-workspace-gmail.git | main |
+| <a name="module_gmail_records"></a> [gmail\_records](#module\_gmail\_records) | oratan-com/cloud-dns-workspace-gmail/google | n/a |
 
 ## Resources
 
