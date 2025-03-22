@@ -11,7 +11,7 @@ Specifically, it creates the following:
 
 ```hcl
 # Create a zone
-module "cloud_dns_zone" {
+module "example_zone" {
   source   = "terraform-google-modules/cloud-dns/google"
 
   domain     = "example.com."
@@ -21,11 +21,11 @@ module "cloud_dns_zone" {
 
 # Create the Gmail records
 module "workspace_gmail" {
-  source   = "git@github.com:kirkkosinski/tf-gcp-cloud-dns-workspace-gmail.git?ref=main"
+  source   = "oratan-com/cloud-dns-workspace-gmail/google"
 
   dkim          = "\"v=DKIM1; k=rsa; p=MII...\""
-  zone_dns_name = module.cloud_dns_zone.domain
-  zone_name     = module.cloud_dns_zone.name
+  zone_dns_name = module.example_zone.domain
+  zone_name     = module.example_zone.name
 }
 ```
 
@@ -33,9 +33,9 @@ See the examples directory for a more complete example.
 
 ## References
 
-* [Google Workspace MX record values](https://support.google.com/a/answer/174125)
-* [Set up DKIM](https://support.google.com/a/answer/174124)
-* [Set up SPF](https://support.google.com/a/answer/33786)
+* [Google Workspace MX record values](https://support.google.com/a/answer/174125) [support.google.com]
+* [Set up DKIM](https://support.google.com/a/answer/174124) [support.google.com]
+* [Set up SPF](https://support.google.com/a/answer/33786) [support.google.com]
 
 
 <!-- BEGIN_TF_DOCS -->
